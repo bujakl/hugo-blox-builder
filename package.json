@@ -51,7 +51,9 @@
     "update:starter": "scripts/update-starter.sh",
     "update:starters": "poetry run python ./scripts/update.py",
     "vendor:libs": "vite build --config vite.config.js",
-    "vendor:libs:watch": "vite build --config vite.config.js --watch"
+    "vendor:libs:watch": "vite build --config vite.config.js --watch",
+    "dev": "npx hugo server -D",
+    "build": "npx hugo --gc --minify"
   },
   "browserslist": "> 1%",
   "packageManager": "pnpm@10.14.0"
