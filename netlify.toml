@@ -1,10 +1,8 @@
 [build]
-command = "hugo --gc --minify -b $URL"
-publish = "public"
+command = "hugo --gc --minify -s starters/blog -b $URL"
+publish = "starters/blog/public"
 
 [build.environment]
 HUGO_VERSION = "0.134.2"
 HUGO_EXTENDED = "true"
-HUGO_ENV = "production"
-# Jeśli używasz Hugo Modules:
-# GO_VERSION = "1.22.0"
+GO_VERSION = "1.23.1"

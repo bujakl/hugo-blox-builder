@@ -14,22 +14,23 @@
     "url": "git+https://github.com/HugoBlox/hugo-blox-builder.git"
   },
   "dependencies": {
+    "alpinejs": "^3.13.10",
     "katex": "^0.16.9",
+    "markmap-autoloader": "^0.15.4",
     "medium-zoom": "^1.0.8",
     "mermaid": "^10.6.0",
-    "markmap-autoloader": "^0.15.4",
-    "alpinejs": "^3.13.10",
     "plotly.js": "^2.27.0",
     "rollup-plugin-delete": "^2.0.0",
     "vite": "^7.1.2",
-    "vite-hugo-plugin": "^3.1.0",
+    "vite-hugo-plugin": "^5.1.0",
     "vite-plugin-static-copy": "^3.1.1"
   },
   "devDependencies": {
     "eslint": "~8.15.0",
     "eslint-config-prettier": "~8.5.0",
-    "prettier": "~2.6.2",
-    "prettier-plugin-go-template": "~0.0.12",
+    "hugo-bin": "^0.145.2",
+    "prettier": "^3.6.2",
+    "prettier-plugin-go-template": "^0.0.15",
     "stylelint": "14.8.2",
     "stylelint-config-prettier": "~9.0.3",
     "stylelint-config-prettier-scss": "^0.0.1",
@@ -52,9 +53,8 @@
     "update:starters": "poetry run python ./scripts/update.py",
     "vendor:libs": "vite build --config vite.config.js",
     "vendor:libs:watch": "vite build --config vite.config.js --watch",
-    "dev": "npx hugo server -D",
-    "build": "npx hugo --gc --minify"
+    "dev": "hugo server --disableFastRender",
+    "build": "hugo --gc --minify"
   },
-  "browserslist": "> 1%",
-  "packageManager": "pnpm@10.14.0"
+  "browserslist": "> 1%"
 }
